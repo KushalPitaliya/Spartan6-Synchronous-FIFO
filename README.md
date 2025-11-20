@@ -1,4 +1,3 @@
-# Spartan6-Synchronous-FIFO
 # Design and Implementation of 8-bit Synchronous FIFO on Spartan-6 FPGA
 
 ## Project Overview
