@@ -1,0 +1,41 @@
+# ==============================================================================
+# top_fifo.ucf - User Constraints File for EDGE Spartan 6 (XC6SLX9)
+# ==============================================================================
+
+# 1. Clock Signal (50 MHz Oscillator)
+NET "clk_50mhz" LOC = "P84";
+NET "clk_50mhz" TNM_NET = "sys_clk";
+TIMESPEC "TS_sys_clk" = PERIOD "sys_clk" 20 ns HIGH 50%;
+
+# 2. Control Buttons
+# Based on your board manual, these are Active-High.
+NET "rst_btn" LOC = "P44"; # Reset Button
+NET "wr_btn"  LOC = "P41"; # Write Button
+NET "rd_btn"  LOC = "P40"; # Read Button
+
+# 3. Data Input Switches (8-bits)
+# Mapping to the 8 slide switches.
+NET "sw_data<0>" LOC = "P22";
+NET "sw_data<1>" LOC = "P21";
+NET "sw_data<2>" LOC = "P17";
+NET "sw_data<3>" LOC = "P16";
+NET "sw_data<4>" LOC = "P15";
+NET "sw_data<5>" LOC = "P14";
+NET "sw_data<6>" LOC = "P12";
+NET "sw_data<7>" LOC = "P11";
+
+# 4. Data Output LEDs (8-bits)
+# Mapping to the 8 general-purpose LEDs.
+NET "led_data<0>" LOC = "P33";
+NET "led_data<1>" LOC = "P32";
+NET "led_data<2>" LOC = "P30";
+NET "led_data<3>" LOC = "P29";
+NET "led_data<4>" LOC = "P27";
+NET "led_data<5>" LOC = "P26";
+NET "led_data<6>" LOC = "P24";
+NET "led_data<7>" LOC = "P23";
+
+# 5. Status LEDs
+# Full and Empty indicators.
+NET "led_full"    LOC = "P139";
+NET "led_empty"   LOC = "P140";
